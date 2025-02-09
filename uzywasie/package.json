@@ -2,11 +2,11 @@
   "name": "uzywasie",
 	"displayName": "uzywasie",
 	"description": "Jak to używa-się?",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"publisher": "PrzemyslawPieszynski",
 	"license": "AGPL-3.0-only",
   "repository": "https://github.com/pieszynski/vscode-extensions",
-	"preview": true,
+	"preview": false,
 	"icon": "icon.png",
   "engines": {
     "vscode": "^1.97.0"

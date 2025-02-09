@@ -1,6 +1,11 @@
 const vscode = require("vscode");
 
 class SecondPipe {
+    /**
+     * Convert data in editor to new format
+     * @param {vscode.TextEditor} editor 
+     * @param {string} joinWith 
+     */
     convertAllInEditor(editor, joinWith = '|') {
         editor.edit((mod) => {
             if (editor.selection.isEmpty) {
@@ -18,6 +23,12 @@ class SecondPipe {
             }
         });
     }
+    /**
+     * 
+     * @param {string} text 
+     * @param {string} joinWith 
+     * @returns 
+     */
     replaceOddPipes(text, joinWith = '|') {
         if (null === text) {
             return text;
