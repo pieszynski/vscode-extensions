@@ -7,6 +7,11 @@ class SecondPipe {
 	 * @param {string} joinWith 
 	 */
 	convertAllInEditor(editor, joinWith = '|') {
+
+		const lineStart = new vscode.Position(
+			editor.selection.active.line,
+			0);
+
 		editor.edit((mod) => {
 			if (editor.selection.isEmpty) {
 				let oldText = editor.document.getText();
@@ -21,7 +26,16 @@ class SecondPipe {
 					mod.replace(sel, newPartOfText);
 				}
 			}
-		});
+		})
+			.then(ok => {
+				if (ok) {
+					editor.selection = new vscode.Selection(lineStart, lineStart);
+					editor.revealRange(
+						new vscode.Range(lineStart, lineStart),
+						vscode.TextEditorRevealType.Default
+					);
+				}
+			});
 	}
 	/**
 	 * 
