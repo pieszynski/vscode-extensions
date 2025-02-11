@@ -1,0 +1,41 @@
+
+name: Publish uzywasie extension
+
+on:
+  push:
+    branches:
+    - main
+    paths:
+    - 'uzywasie/**'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: uzywasie
+
+    env:
+      NEXT_VERSION: 1.1.${{github.run_number}}
+      
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v4
+        
+    - run: npm ci
+    
+    - name: Update package version to ${{ env.NEXT_VERSION }}
+      run : npm version ${{ env.NEXT_VERSION }} --no-git-tag-version
+      
+    - run: npm run package
+      
+    - name: Publish package
+      if: success()
+      run: npm run deploy
+      env:
+        VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
