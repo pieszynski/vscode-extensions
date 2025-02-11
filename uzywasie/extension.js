@@ -2,6 +2,7 @@
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require("vscode");
 const second_pipe = require("./second-pipe");
+const jsonl = require("./json-log");
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -22,9 +23,15 @@ function activate(context) {
 
 	context.subscriptions.push(vscode.commands.registerCommand('extension.oddPipeReplaceNewLine', () => {
 		if (undefined !== vscode.window.activeTextEditor) {
-				secondPipe.convertAllInEditor(vscode.window.activeTextEditor, '\n');
+			secondPipe.convertAllInEditor(vscode.window.activeTextEditor, '\n');
 		}
-}));
+	}));
+
+	context.subscriptions.push(vscode.commands.registerCommand('extension.jsonlGetMessage', () => {
+		if (undefined !== vscode.window.activeTextEditor) {
+			jsonl.extractMessageFromJsonl(vscode.window.activeTextEditor);
+		}
+	}));
 }
 
 // This method is called when your extension is deactivated

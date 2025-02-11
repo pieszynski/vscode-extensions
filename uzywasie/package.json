@@ -2,7 +2,7 @@
   "name": "uzywasie",
 	"displayName": "uzywasie",
 	"description": "Jak to używa-się?",
-	"version": "0.0.5",
+	"version": "1.0.7",
 	"publisher": "PrzemyslawPieszynski",
 	"license": "AGPL-3.0-only",
   "repository": "https://github.com/pieszynski/vscode-extensions",
@@ -15,7 +15,8 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.oddPipeReplaceNewLine"
+    "onCommand:extension.oddPipeReplaceNewLine",
+    "onCommand:extension.jsonlGetMessage"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -23,6 +24,11 @@
       {
         "command": "extension.oddPipeReplaceNewLine",
         "title": "%extension.oddPipeReplaceNewLine.title%",
+        "category": "uzy"
+      },
+      {
+        "command": "extension.jsonlGetMessage",
+        "title": "%extension.jsonlGetMessage.title%",
         "category": "uzy"
       }
     ]

@@ -1,3 +1,4 @@
 {
-	"extension.oddPipeReplaceNewLine.title": "Zamień nieparzyste pipe w znak równości (| -> =); parzyste w nowe linie"
+	"extension.oddPipeReplaceNewLine.title": "Zamień nieparzyste pipe w znak równości (| -> =); parzyste w nowe linie",
+	"extension.jsonlGetMessage.title": "Tekst z logu JSONL"
 }
