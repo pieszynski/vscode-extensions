@@ -16,7 +16,8 @@
   ],
   "activationEvents": [
     "onCommand:extension.oddPipeReplaceNewLine",
-    "onCommand:extension.jsonlGetMessage"
+    "onCommand:extension.jsonlGetMessage",
+    "onCommand:extension.alignIntoColumn"
   ],
   "main": "./extension.js",
   "contributes": {
@@ -29,6 +30,11 @@
       {
         "command": "extension.jsonlGetMessage",
         "title": "%extension.jsonlGetMessage.title%",
+        "category": "uzy"
+      },
+      {
+        "command": "extension.alignIntoColumn",
+        "title": "%extension.alignIntoColumn.title%",
         "category": "uzy"
       }
     ]

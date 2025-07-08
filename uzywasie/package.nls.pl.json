@@ -1,4 +1,5 @@
 {
 	"extension.oddPipeReplaceNewLine.title": "Zamień nieparzyste pipe w znak równości (| -> =); parzyste w nowe linie",
-	"extension.jsonlGetMessage.title": "Tekst z logu JSONL"
+	"extension.jsonlGetMessage.title": "Tekst z logu JSONL",
+	"extension.alignIntoColumn.title": "Wyrównaj zaznaczone regiony w kolumnę"
 }

@@ -1,4 +1,5 @@
 {
 	"extension.oddPipeReplaceNewLine.title": "Replace odd pipes with equals (| -> =); even ones with new-line",
-	"extension.jsonlGetMessage.title": "Get message from JSONL log"
+	"extension.jsonlGetMessage.title": "Get message from JSONL log",
+	"extension.alignIntoColumn.title": "Align selected regions into column"
 }

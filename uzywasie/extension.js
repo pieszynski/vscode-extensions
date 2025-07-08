@@ -3,6 +3,7 @@
 const vscode = require("vscode");
 const second_pipe = require("./second-pipe");
 const jsonl = require("./json-log");
+const aligncol = require("./align-column");
 
 // This method is called when your extension is activated
 // Your extension is activated the very first time the command is executed
@@ -30,6 +31,12 @@ function activate(context) {
 	context.subscriptions.push(vscode.commands.registerCommand('extension.jsonlGetMessage', () => {
 		if (undefined !== vscode.window.activeTextEditor) {
 			jsonl.extractMessageFromJsonl(vscode.window.activeTextEditor);
+		}
+	}));
+
+	context.subscriptions.push(vscode.commands.registerCommand('extension.alignIntoColumn', () => {
+		if (undefined !== vscode.window.activeTextEditor) {
+			aligncol.alignIntoColumn(vscode.window.activeTextEditor);
 		}
 	}));
 }
