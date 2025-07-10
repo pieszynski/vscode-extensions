@@ -1,4 +1,4 @@
-- Sign in to [Azure DevOps](https://dev.azure.com/) and sign in with your Microsoft account
+- Sign in to [Azure DevOps Organizations](https://aex.dev.azure.com/me?mkt=en-US) or [Azure DevOps](https://dev.azure.com/) and sign in with your Microsoft account
 - Select organization
 - Click "Manage security" action
 - If not already in PAT then click ⚙️ (cog) next to profile picture
